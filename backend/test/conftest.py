@@ -2,12 +2,12 @@ import os
 import pytest
 from fastapi.testclient import TestClient
 from bson import ObjectId
-from typing import Dict, Any
+from typing import Any
 
 
 class InMemoryTaskRepository:
     def __init__(self):
-        self.items: Dict[str, Dict[str, Any]] = {}
+        self.items: dict[str, dict[str, Any]] = {}
 
     def create(self, task_data):
         _id = ObjectId()

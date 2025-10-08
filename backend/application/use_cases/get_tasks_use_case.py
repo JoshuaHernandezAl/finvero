@@ -15,6 +15,7 @@ class GetTasksUseCase:
                     title=task["title"],
                     completed=task["completed"],
                     id=str(task["_id"]),
+                    description=task["description"]
                 )
                 for task in tasks
             ]

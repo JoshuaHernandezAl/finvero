@@ -14,5 +14,5 @@ class UpdateTaskUseCase:
         if not update_data:
             raise HTTPException(status_code=400, detail="No data provided")
         task_updated = self.repository.update_one(task_id, {"$set": update_data})
-        return TaskVO(title=task_updated["title"], completed=task_updated["completed"], id=str(task_updated["_id"]))
+        return TaskVO(title=task_updated["title"], completed=task_updated["completed"], id=str(task_updated["_id"]), description=task_updated["description"])
         

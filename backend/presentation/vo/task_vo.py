@@ -5,3 +5,4 @@ class TaskVO(BaseModel):
   id: str
   title: str
   completed: bool
+  description: str

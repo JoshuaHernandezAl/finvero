@@ -9,4 +9,4 @@ class CreateTaskUseCase:
 
     def handle(self, task: TaskDto):
         task = self.repository.create(task)
-        return TaskVO(title=task["title"], completed=task["completed"], id=task["id"])
+        return TaskVO(title=task["title"], completed=task["completed"], id=task["id"], description=task["description"])
